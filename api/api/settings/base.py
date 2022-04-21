@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'core',
     'accounts',
     'authentication',
+    'contacts',
 ]
 
 SITE_ID = 1

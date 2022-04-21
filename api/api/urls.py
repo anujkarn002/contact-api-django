@@ -29,6 +29,7 @@ urlpatterns = ([
          name='api-docs'),
     path(f'{v1_prefix}auth/', include('authentication.urls')),
     path(f'{v1_prefix}', include('accounts.urls')),
+    path(f'{v1_prefix}', include('contacts.urls')),
     # path(v1_prefix, include(router.urls)),
 ]
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
