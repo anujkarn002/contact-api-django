@@ -1,0 +1,1129 @@
+{
+	"info": {
+		"_postman_id": "fd6fbc93-61a4-4022-b92a-12662b9d8293",
+		"name": "Contacts API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "v1",
+			"item": [
+				{
+					"name": "contacts",
+					"item": [
+						{
+							"name": "phone",
+							"item": [
+								{
+									"name": "Create - Phone",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"number\": \"9876543210\",\r\n    \"countryCode\": \"+977\",\r\n    \"label\": \"Mobile\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contacts/3/phone/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												"3",
+												"phone",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Example - Create",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"number\": \"9876543210\",\r\n    \"countryCode\": \"+977\",\r\n    \"label\": \"Mobile\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/contacts/3/phone/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"contacts",
+														"3",
+														"phone",
+														""
+													]
+												}
+											},
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": null,
+											"cookie": [],
+											"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully added new phone number.\",\n    \"data\": {\n        \"id\": 4,\n        \"number\": \"9876543210\",\n        \"countryCode\": \"+977\",\n        \"label\": \"Mobile\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Update - Phone",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"number\": \"9876543211\",\r\n    \"countryCode\": \"+977\",\r\n    \"label\": \"Office\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contacts/3/phone/4/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												"3",
+												"phone",
+												"4",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Example - Update",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"number\": \"9876543211\",\r\n    \"countryCode\": \"+977\",\r\n    \"label\": \"Office\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/contacts/3/phone/4/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"contacts",
+														"3",
+														"phone",
+														"4",
+														""
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": null,
+											"cookie": [],
+											"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully updated phone number.\",\n    \"data\": {\n        \"id\": 4,\n        \"number\": \"9876543211\",\n        \"countryCode\": \"+977\",\n        \"label\": \"Office\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete - Phones",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/contacts/3/phone/3/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												"3",
+												"phone",
+												"3",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "label",
+							"item": [
+								{
+									"name": "Create - Label",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Friend\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contacts/3/label/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												"3",
+												"label",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Example - Create",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\": \"Friend\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/contacts/3/label/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"contacts",
+														"3",
+														"label",
+														""
+													]
+												}
+											},
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": null,
+											"cookie": [],
+											"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully added new label.\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Friend\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Update - Label",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"name\": \"Friend\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contacts/3/label/2/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												"3",
+												"label",
+												"2",
+												""
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Update - Phone",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"name\": \"Friend\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/contacts/3/label/4/",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"contacts",
+														"3",
+														"label",
+														"4",
+														""
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": null,
+											"cookie": [],
+											"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully updated label.\",\n    \"data\": {\n        \"id\": 2,\n        \"name\": \"Friend\"\n    }\n}"
+										}
+									]
+								},
+								{
+									"name": "Delete - Label",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/contacts/3/label/2/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												"3",
+												"label",
+												"2",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"middleName\": \"Middle\",\r\n    \"lastName\": \"Last\",\r\n    \"address\": null,\r\n    \"email\": \"test@contact.com\",\r\n    \"image\": null,\r\n    \"note\": null,\r\n    \"jobTitle\": null,\r\n    \"currentCompany\": null,\r\n    \"isFavorite\": false,\r\n    \"phones\": [\r\n    ],\r\n    \"labels\": [\r\n      \r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contacts/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"middleName\": \"Middle\",\r\n    \"lastName\": \"Last\",\r\n    \"address\": null,\r\n    \"email\": \"test@contact.com\",\r\n    \"image\": null,\r\n    \"note\": null,\r\n    \"jobTitle\": null,\r\n    \"currentCompany\": null,\r\n    \"isFavorite\": false,\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"9876543210\"\r\n        }\r\n    ],\r\n    \"labels\": [\r\n      {\r\n          \"name\": \"Friend\"\r\n      }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contacts/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully created a new contact.\",\n    \"data\": {\n        \"id\": 3,\n        \"firstName\": \"Test\",\n        \"middleName\": \"Middle\",\n        \"lastName\": \"Last\",\n        \"address\": null,\n        \"email\": \"test@contact.com\",\n        \"image\": null,\n        \"note\": null,\n        \"jobTitle\": null,\n        \"currentCompany\": null,\n        \"isFavorite\": false,\n        \"phones\": [\n            {\n                \"id\": 2,\n                \"number\": \"9876543210\",\n                \"countryCode\": \"\",\n                \"label\": null\n            }\n        ],\n        \"labels\": [\n            {\n                \"id\": 1,\n                \"name\": \"Friend\"\n            }\n        ]\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Retrieve",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contacts/3/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										"3",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Retrieve",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/contacts/3/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												"3",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully created a new contact.\",\n    \"data\": {\n        \"id\": 1,\n        \"firstName\": \"Test\",\n        \"middleName\": \"Middle\",\n        \"lastName\": \"Last\",\n        \"address\": null,\n        \"email\": \"test@contact.com\",\n        \"image\": null,\n        \"note\": null,\n        \"jobTitle\": null,\n        \"currentCompany\": null,\n        \"isFavorite\": false,\n        \"phones\": [\n            1\n        ],\n        \"labels\": []\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/contacts/3/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										"3",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Delete",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/contacts/3/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												"3",
+												""
+											]
+										}
+									},
+									"code": 204,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Hello\",\r\n    \"middleName\": \"Middle\",\r\n    \"lastName\": \"Last\",\r\n    \"address\": null,\r\n    \"email\": \"test@contact.com\",\r\n    \"image\": null,\r\n    \"note\": null,\r\n    \"jobTitle\": null,\r\n    \"currentCompany\": null,\r\n    \"isFavorite\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/contacts/3/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										"3",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Retrieve",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"middleName\": \"Middle\",\r\n    \"lastName\": \"Last\",\r\n    \"address\": null,\r\n    \"email\": \"test@contact.com\",\r\n    \"image\": null,\r\n    \"note\": null,\r\n    \"jobTitle\": null,\r\n    \"currentCompany\": null,\r\n    \"isFavorite\": false,\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"9876543210\"\r\n        }\r\n    ],\r\n    \"labels\": [\r\n      {\r\n          \"name\": \"Friend\"\r\n      }\r\n    ]\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/contacts/3/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												"3",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully created a new contact.\",\n    \"data\": {\n        \"id\": 1,\n        \"firstName\": \"Test\",\n        \"middleName\": \"Middle\",\n        \"lastName\": \"Last\",\n        \"address\": null,\n        \"email\": \"test@contact.com\",\n        \"image\": null,\n        \"note\": null,\n        \"jobTitle\": null,\n        \"currentCompany\": null,\n        \"isFavorite\": false,\n        \"phones\": [\n            1\n        ],\n        \"labels\": []\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "List - Contacts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/contacts/?search_query=hello&page_size=1&page=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"contacts",
+										""
+									],
+									"query": [
+										{
+											"key": "search_query",
+											"value": "hello"
+										},
+										{
+											"key": "page_size",
+											"value": "1"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - List",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/contacts/?search_query=hello&page_size=1&page=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"contacts",
+												""
+											],
+											"query": [
+												{
+													"key": "search_query",
+													"value": "hello"
+												},
+												{
+													"key": "page_size",
+													"value": "1"
+												},
+												{
+													"key": "page",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Fetched all contacts\",\n    \"data\": {\n        \"count\": 3,\n        \"next\": null,\n        \"previous\": null,\n        \"results\": [\n            {\n                \"id\": 1,\n                \"firstName\": \"Test\",\n                \"middleName\": \"Middle\",\n                \"lastName\": \"Last\",\n                \"address\": null,\n                \"email\": \"test@contact.com\",\n                \"image\": null,\n                \"note\": null,\n                \"jobTitle\": null,\n                \"currentCompany\": null,\n                \"isFavorite\": false,\n                \"phones\": [],\n                \"labels\": []\n            },\n            {\n                \"id\": 2,\n                \"firstName\": \"Test\",\n                \"middleName\": \"Middle\",\n                \"lastName\": \"Last\",\n                \"address\": null,\n                \"email\": \"test@contact.com\",\n                \"image\": null,\n                \"note\": null,\n                \"jobTitle\": null,\n                \"currentCompany\": null,\n                \"isFavorite\": false,\n                \"phones\": [\n                    {\n                        \"id\": 1,\n                        \"number\": \"9876543210\",\n                        \"countryCode\": \"\",\n                        \"label\": null\n                    }\n                ],\n                \"labels\": []\n            },\n            {\n                \"id\": 3,\n                \"firstName\": \"Test\",\n                \"middleName\": \"Middle\",\n                \"lastName\": \"Last\",\n                \"address\": null,\n                \"email\": \"test@contact.com\",\n                \"image\": null,\n                \"note\": null,\n                \"jobTitle\": null,\n                \"currentCompany\": null,\n                \"isFavorite\": false,\n                \"phones\": [\n                    {\n                        \"id\": 2,\n                        \"number\": \"9876543210\",\n                        \"countryCode\": \"\",\n                        \"label\": null\n                    }\n                ],\n                \"labels\": [\n                    {\n                        \"id\": 1,\n                        \"name\": \"Friend\"\n                    }\n                ]\n            }\n        ]\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"User\",\r\n    \"email\": \"test@contact.com\",\r\n    \"password\": \"user123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"User\",\r\n    \"email\": \"test@contact.com\",\r\n    \"password\": \"user123\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"User Profile created and verification email has been sent successfully.\",\n    \"data\": {\n        \"id\": 2,\n        \"firstName\": \"Test\",\n        \"lastName\": \"User\",\n        \"avatar\": null,\n        \"isActive\": true,\n        \"isEmailVerified\": false,\n        \"location\": null,\n        \"email\": \"test@contact.com\",\n        \"phone\": null,\n        \"nationality\": null,\n        \"skills\": [],\n        \"interests\": [],\n        \"countryCode\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"User\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/me/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"me",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Update",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"firstName\": \"Test\",\r\n    \"lastName\": \"User\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/users/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"User profile updated successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"firstName\": \"Test\",\n        \"lastName\": \"User\",\n        \"avatar\": null,\n        \"isActive\": true,\n        \"isEmailVerified\": false,\n        \"location\": null,\n        \"email\": \"anujkarn002@gmail.com\",\n        \"phone\": null,\n        \"nationality\": null,\n        \"skills\": [],\n        \"interests\": [],\n        \"countryCode\": null\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "My profile",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/me/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"me",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Update",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/users/me/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"users",
+												"me",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"User data fetched successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"firstName\": \"Test\",\n        \"lastName\": \"User\",\n        \"avatar\": null,\n        \"isActive\": true,\n        \"isEmailVerified\": false,\n        \"location\": null,\n        \"email\": \"anujkarn002@gmail.com\",\n        \"phone\": null,\n        \"nationality\": null,\n        \"skills\": [],\n        \"interests\": [],\n        \"countryCode\": null\n    }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "Create Token",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"{{username}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/jwt/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"jwt",
+										"create"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"{{username}}\",\r\n    \"password\": \"{{password}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/jwt/create",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"jwt",
+												"create"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully created jwt tokens\",\n    \"data\": {\n        \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY1MzExOTk5NiwianRpIjoiZTkxNDk3Njg5Y2Q2NGRhM2IwOGFhNGIxOWU2MDQ0Y2UiLCJ1c2VyX2lkIjoxLCJuYW1lIjoiICIsImlzX3N1cGVydXNlciI6dHJ1ZSwiaXNfc3RhZmYiOnRydWUsImRldmljZV9pZCI6bnVsbH0.R_W3x0CS-ZT42zRXOfs9Ye2LCdeedN7vB1BZ4YVwmdM\",\n        \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUwNTI4Mjk2LCJqdGkiOiI1YmRkOWZiOGUxNDg0YjI4OWMyMzhkMmM1NDI5NGZjOSIsInVzZXJfaWQiOjEsIm5hbWUiOiIgIiwiaXNfc3VwZXJ1c2VyIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiZGV2aWNlX2lkIjpudWxsfQ.gpzemmD4FcEj9o0ptVyNU72_98qZREZo-Zlz7p2C0WA\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Refresh Token",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"refresh\": \"{{refresh_token}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/jwt/refresh",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"jwt",
+										"refresh"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"refresh\": \"{{refresh_token}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/jwt/refresh",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"jwt",
+												"refresh"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully refreshed access token\",\n    \"data\": {\n        \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjUwNTI4MzcwLCJqdGkiOiIzYWNiYWEzMWNlMTM0NTJhYTQzZTY4NWNmNTg3MTY5ZCIsInVzZXJfaWQiOjEsIm5hbWUiOiIgIiwiaXNfc3VwZXJ1c2VyIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiZGV2aWNlX2lkIjpudWxsfQ.OfzIld1AO9TkL9VOw7zLYo0wcc0oW4hkULsw4k6M4iI\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Revoke Token",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"refresh\": \"{{refresh_token}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/auth/jwt/revoke",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"jwt",
+										"revoke"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Example - Create",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"refresh\": \"{{refresh_token}}\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/jwt/revoke",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"jwt",
+												"revoke"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": null,
+									"cookie": [],
+									"body": "{\n    \"status\": \"Success\",\n    \"detail\": \"Successfully revoked token\",\n    \"data\": {}\n}"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{access_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"function parseJwt (token) {",
+					"    var base64Url = token.split('.')[1];",
+					"    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');",
+					"    var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {",
+					"        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);",
+					"    }).join(''));",
+					"",
+					"    return JSON.parse(jsonPayload);",
+					"};",
+					"",
+					"const isJwtExpired = (jwt) => {",
+					"    if (jwt == \"\")",
+					"        return true",
+					"    let payload = parseJwt(jwt)",
+					"    let expiry = new Date(payload.exp*1000)",
+					"    let now = new Date()",
+					"    return now > expiry",
+					"}",
+					"",
+					"",
+					"let accessToken;",
+					"let refreshToken;",
+					"",
+					"console.log(pm.request.auth?.type)",
+					"",
+					"",
+					"let baseUrl = pm.environment.get(\"baseUrl\");",
+					"",
+					"accessToken = pm.collectionVariables.get(\"access_token\");",
+					"refreshToken = pm.collectionVariables.get(\"access_token\");",
+					"",
+					"if ([\"auth\", \"verify_email\", \"reset_password\"].some(chunk => pm.request.url.toString().includes(chunk)) || pm.request.auth?.type === \"noauth\") {",
+					"    console.log(\"Works without auth\")",
+					"} else if (refreshToken != null && accessToken != null && !isJwtExpired(refreshToken)) {",
+					"    // we have tokens",
+					"    // check if access token is expired",
+					"    if (isJwtExpired(accessToken)) {",
+					"        // refresh token",
+					"        const refreshRequest = {",
+					"            method: 'POST',",
+					"            url: \"{baseUrl}/auth/jwt/refresh\",",
+					"            body: {",
+					"                mode: 'formdata',",
+					"                formdata: [",
+					"                    { key: 'refresh', value: refreshToken }",
+					"                ]",
+					"            }",
+					"        };",
+					"        pm.sendRequest(refreshRequest, (err, response) => {",
+					"            const jsonResponse = response.json();",
+					"            const newAccessToken = jsonResponse.data.access;",
+					"            pm.collectionVariables.set('access_token', newAccessToken);",
+					"        });",
+					"        ",
+					"    } else {",
+					"        // we are good to go",
+					"    }",
+					"} else {",
+					"    // we don't have tokens",
+					"    // login",
+					"    const getTokenRequest = {",
+					"        method: 'POST',",
+					"        url: `${baseUrl}/auth/jwt/create`,",
+					"        body: {",
+					"            mode: 'formdata',",
+					"            formdata: [",
+					"                { key: 'username', value: pm.collectionVariables.get(\"username\") },",
+					"                { key: 'password', value: pm.collectionVariables.get(\"password\") }",
+					"            ]",
+					"        }",
+					"    };",
+					"",
+					"    pm.sendRequest(getTokenRequest, (err, response) => {",
+					"    if (response.code < 299){",
+					"    const jsonResponse = response.json();",
+					"    const newAccessToken = jsonResponse.data.access;",
+					"    const newRefreshToken = jsonResponse.data.refresh;",
+					"",
+					"    pm.collectionVariables.set('access_token', newAccessToken);",
+					"    pm.collectionVariables.set('refresh_token', newRefreshToken);",
+					"    } else {",
+					"        throw \"wrong email/password provided\"",
+					"    }",
+					"    });",
+					"}",
+					"",
+					"",
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "username",
+			"value": "anujkarn002",
+			"type": "string"
+		},
+		{
+			"key": "password",
+			"value": "admin123",
+			"type": "string"
+		},
+		{
+			"key": "access_token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "refresh_token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
